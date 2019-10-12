@@ -1,0 +1,22 @@
+name: ACTestServer
+version: ${project.version}
+main: uwu.smsgamer.actestserver.ACTestServer
+authors: [Sms_Gamer]
+description: ACTestServer
+commands:
+  anticheat:
+    usage: /anticheat <anticheat>
+    description: Choses your anticheat.
+    aliases:
+      - ac
+  verbose:
+    usage: /verbose [yes/no]
+    description: Toggles your verbose or disables/enables it.
+  hunger:
+    usage: /hunger [yes/no]
+    description: Toggles your hunger or disables/enables it.
+  damage:
+    usage: /damage [yes/no]
+    description: Toggles your damage or disables/enables it.
+    aliases:
+      - god

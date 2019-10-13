@@ -23,6 +23,7 @@ public final class ACTestServer extends JavaPlugin {
     public void onEnable() {
         instance = this;
         getCommand("anticheat").setExecutor(new Commands());
+        getCommand("anticheat").setTabCompleter(new Commands());
         //getCommand("verbose").setExecutor(new Commands());
         getCommand("damage").setExecutor(new Commands());
         getCommand("hunger").setExecutor(new Commands());

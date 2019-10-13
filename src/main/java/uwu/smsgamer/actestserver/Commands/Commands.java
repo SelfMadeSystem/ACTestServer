@@ -64,24 +64,17 @@ public class Commands implements CommandExecutor, TabCompleter {
      */
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
-        if((command.getName().equalsIgnoreCase("punish")&&!sender.hasPermission("uwu.punish.use")) ||
-        (command.getName().equalsIgnoreCase("forgive")&&!sender.hasPermission("uwu.forgive.use")) ||
-        (command.getName().equalsIgnoreCase("setviolations")&&!sender.hasPermission("uwu.setvl.use")) ||
-        (command.getName().equalsIgnoreCase("checkviolations")&&!sender.hasPermission("uwu.checkvl.use")))
-            return null;
         List<String> tab = new ArrayList<>();
-        if(command.getName().equalsIgnoreCase("uwupunishments")){
-        }else{
-            if(args.length == 1){
-                return null;
-            }
-            if(args.length == 2 && !command.getName().equalsIgnoreCase("checkviolations")){
-                tab.addAll(ACTestServer.instance.getConfig().getConfigurationSection("types").getKeys(false));
-            }
-            if(args.length == 3 && command.getName().equalsIgnoreCase("setviolations")){
-                tab.add("punish");
-                tab.add("forgive");
-                tab.add("none");
+        if(command.getName().equalsIgnoreCase("anticheat")){
+            if(args.length == 0){
+                tab.add("AAC");
+                tab.add("AACAdditionPro");
+                tab.add("NCP");
+                tab.add("Search");
+                tab.add("Phoenix");
+                tab.add("Horizon");
+                tab.add("Matrix");
+                tab.add("None");
             }
         }
         return tab;
